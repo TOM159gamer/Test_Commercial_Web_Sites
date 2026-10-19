@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloce Motors | Performances & Ingénierie</title>
+    <style>
+        /* --- STYLE CSS --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #f3f4f6;
+            background-color: #0b0f19;
+        }
+
+        /* Barre de navigation */
+        nav {
+            background-color: rgba(11, 15, 25, 0.9);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #1f2937;
+        }
+
+        /* Style du Logo Cliquable */
+        nav .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: #e11d48;
+            text-decoration: none; /* Enlève le soulignement du lien */
+            transition: opacity 0.2s ease;
+        }
+
+        /* Léger effet visuel au survol du logo */
+        nav .logo:hover {
+            opacity: 0.85;
+        }
+
+        nav .nav-links a {
+            text-decoration: none;
+            color: #9ca3af;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav .nav-links a:hover, nav .nav-links a.active {
+            color: #e11d48;
+        }
+
+        /* En-tête de section */
+        header.section-header {
+            padding: 5rem 2rem 2rem 2rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header.section-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        header.section-header p {
+            color: #9ca3af;
+            font-size: 1.2rem;
+        }
+
+        /* Grille des caractéristiques avancées */
+        .tech-grid {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .tech-card {
+            background: #111827;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid #1f2937;
+        }
+
+        .tech-card h3 {
+            color: #e11d48;
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-card p {
+            color: #d1d5db;
+            font-size: 0.95rem;
+        }
+
+        /* Section Tableau Comparatif */
+        .table-container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .table-container h2 {
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .responsive-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #111827;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #1f2937;
+        }
+
+        .responsive-table th, .responsive-table td {
+            padding: 1.25rem;
+            text-align: left;
+        }
+
+        .responsive-table th {
+            background-color: #1f2937;
+            color: #ffffff;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+
+        .responsive-table tr {
+            border-bottom: 1px solid #1f2937;
+            transition: background-color 0.2s;
+        }
+
+        .responsive-table tr:hover {
+            background-color: #1f2937;
+        }
+
+        .responsive-table td.highlight {
+            color: #e11d48;
+            font-weight: bold;
+        }
+
+        /* Pied de page et avertissement */
+        footer {
+            background-color: #070a10;
+            color: #6b7280;
+            text-align: center;
+            padding: 4rem 2rem;
+            margin-top: 6rem;
+            border-top: 1px solid #1f2937;
+        }
+
+        .disclaimer {
+            background-color: #111827;
+            color: #d1d5db;
+            padding: 1.25rem;
+            border-radius: 4px;
+            max-width: 750px;
+            margin: 2rem auto 0 auto;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            border-left: 4px solid #f59e0b;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de Navigation avec LOGO CLIQUABLE -->
+    <nav>
+        <a href="index.html" class="logo">VÉLOCE</a>
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>
+            <a href="#" class="active">Performances</a>
+        </div>
+    </nav>
+
+    <!-- En-tête -->
+    <header class="section-header">
+        <h1>Fiche Technique & Données</h1>
+        <p>Explorez les mesures de performances brutes et l'ingénierie aérodynamique de la gamme EV-X.</p>
+    </header>
+
+    <!-- Tableau de comparaison des performances -->
+    <section class="table-container">
+        <h2>Comparatif des Motorisations</h2>
+        <table class="responsive-table">
+            <thead>
+                <tr>
+                    <th>Caractéristique</th>
+                    <th>EV-X Standard</th>
+                    <th>EV-X Track Edition</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Puissance Maximale</td>
+                    <td>670 ch</td>
+                    <td class="highlight">1020 ch</td>
+                </tr>
+                <tr>
+                    <td>0 à 100 km/h</td>
+                    <td>3.2 secondes</td>
+                    <td class="highlight">1.9 seconde</td>
+                </tr>
+                <tr>
+                    <td>Vitesse de pointe</td>
+                    <td>250 km/h</td>
+                    <td class="highlight">322 km/h</td>
+                </tr>
+                <tr>
+                    <td>Configuration Moteurs</td>
+                    <td>Double moteur (Transmission intégrale)</td>
+                    <td>Triple moteur (Vectorisation de couple)</td>
+                </tr>
+                <tr>
+                    <td>Capacité Batterie</td>
+                    <td>95 kWh</td>
+                    <td>115 kWh</td>
+                </tr>
+                <tr>
+                    <td>Autonomie (WLTP estimée)</td>
+                    <td class="highlight">850 km</td>
+                    <td>710 km</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Détails technologiques -->
+    <section class="tech-grid">
+        <div class="tech-card">
+            <h3>Aérodynamisme Actif</h3>
+            <p>Un aileron arrière adaptatif ajuste son inclinaison en temps réel selon la vitesse pour optimiser l'appui en courbe et réduire la traînée en ligne droite.</p>
+        </div>
+        <div class="tech-card">
+            <h3>Architecture 900V</h3>
+            <p>Grâce au système électrique ultra-haute tension, rechargez de 10% à 80% en seulement 12 minutes sur nos bornes de recharge ultra-rapides Veloce Supercharge.</p>
+        </div>
+        <div class="tech-card">
+            <h3>Châssis Carbone Monocoque</h3>
+            <p>Une cellule centrale entièrement en fibre de carbone tressée offre une rigidité torsionnelle exceptionnelle tout en maintenant le poids sous la barre des 1900 kg.</p>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 Veloce Motors International. Tous droits réservés.</p>
+        
+        <div class="disclaimer">
+            <strong>⚠️ AVERTISSEMENT / PAGE DE TEST :</strong> Ce site internet est une fausse page de spécifications techniques créée uniquement dans le cadre d'un exercice de développement web. Les statistiques, technologies et modèles présentés ("Veloce Motors") sont strictement fictifs et ne correspondent à aucune réalité industrielle ou commerciale.
+        </div>
+    </footer>
+
+</body>
+</html>
